@@ -1,7 +1,6 @@
 package P0059;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public abstract class Menu  {
 

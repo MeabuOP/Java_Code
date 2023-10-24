@@ -24,7 +24,7 @@ public class Manager {
         String path = Validator.inputString("Enter Path: ");
         double money = Validator.inputNonNegativeDouble("Enter Money: ");
         
-        //Read file
+        //Read file + Sort
         ArrayList<Person> personList = readFile(path);
         
         
