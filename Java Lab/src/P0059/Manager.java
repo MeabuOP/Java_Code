@@ -29,13 +29,13 @@ public class Manager {
         
         
         //Path not found
-        if (personList == null) return;
+        if (personList == null) return ;
         
         
         //File found but no data
         if (personList.isEmpty()){
             System.out.println("Empty data!");
-            return;
+            return ;
         }
         
         
@@ -54,7 +54,10 @@ public class Manager {
         System.out.println();
         System.out.println("Max: " + resultList.get(resultList.size() - 1).getName());
         System.out.println("Min: " + resultList.get(0).getName());
+        
     }
+    
+    
     
     public static ArrayList<Person> readFile(String path){
         
@@ -110,13 +113,21 @@ public class Manager {
     public static void copyWordOneTimes(){
         String source = Validator.inputString("Enter Source: ");
         ArrayList<Person> personList = readFile(source);
+        
         //File not found or empty data
         if (personList == null) return;
         if (personList.isEmpty()){
             System.out.println("Empty data!");
             return;
         }
+        double money = Validator.inputNonNegativeDouble("Enter Money: ");
+        ArrayList<Person> resultList = new ArrayList<>();
+        for (Person p:personList){
+            if (p.getSalary() >= money) {
+                resultList.add(p);
+            }
+        }
         String newFile = Validator.inputString("Enter new file name: ");
-        writeFile(newFile, personList);
+        writeFile(newFile, resultList);
     }
 }
