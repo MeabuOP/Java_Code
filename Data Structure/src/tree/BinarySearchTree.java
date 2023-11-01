@@ -286,3 +286,57 @@ public TreeNode<T> delete(TreeNode<T> node, T info) {
     }
 }
 */
+
+/*
+public class PostorderTraversal {
+    public static ArrayList<Integer> postorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+        stack1.push(root);
+
+        while (!stack1.isEmpty()) {
+            TreeNode current = stack1.pop();
+            stack2.push(current);
+
+            if (current.left != null) {
+                stack1.push(current.left);
+            }
+
+            if (current.right != null) {
+                stack1.push(current.right);
+            }
+        }
+
+        while (!stack2.isEmpty()) {
+            result.add(stack2.pop().val);
+        }
+
+        return result;
+    }
+*/
+
+/*
+public class InorderTraversal {
+    public static ArrayList<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode current = root;
+
+        while (current != null || !stack.isEmpty()) {
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            result.add(current.val);
+            current = current.right;
+        }
+
+        return result;
+    }
+*/

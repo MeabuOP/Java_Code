@@ -1,4 +1,4 @@
-package SU23;
+package SU23_Teacher;
 
 public class Main {
 
