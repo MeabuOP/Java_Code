@@ -12,7 +12,7 @@ import java.util.Queue;
  * @author ASUS
  */
 public class BinarySearchTree {
-    protected Node root = new Node();
+    protected Node root = null;
 
     public BinarySearchTree() {
     }
@@ -37,7 +37,7 @@ public class BinarySearchTree {
     // Cau 2
     private Node addNode(Worker worker,Node root){
         if (root == null){
-            root = new Node(worker, null, null);
+            return new Node(worker, null, null);
         }
         int compare = worker.compareTo(root.data);
         if (compare < 0){

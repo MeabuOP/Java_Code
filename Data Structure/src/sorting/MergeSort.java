@@ -8,7 +8,13 @@ package sorting;
  *
  * @author ASUS
  */
+//
 public class MergeSort {
+    // n-1 divides
+    //Divide take O(logn) time
+    //Merge take O(n) time for comparing and sort
+    // -> O(nlogn)
+   // Space complexity O(n)
     // Function to perform Merge Sort on an array
     static void mergeSort(int[] array) {
         int n = array.length;

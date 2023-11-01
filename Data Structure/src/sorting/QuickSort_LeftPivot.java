@@ -9,6 +9,11 @@ package sorting;
  * @author ASUS
  */
 public class QuickSort_LeftPivot {
+    //O(nlogn), worst case O(n^2)
+    //Divide O(n)
+    // O(logn) for applying to each n/2
+    //Space complexity of quickSort O(logn)
+    
     
     public static void quickSort(int[] array, int left, int right) {
         if (left < right) {
